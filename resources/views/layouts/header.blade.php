@@ -5,7 +5,7 @@
                 <div class="header-logo">
                     <a href="{{ url('/') }}">
                         <img src="{{asset('bdtravellbangladesh/assets/img/logo.png')}}" alt="Logo">
-                        <span>Superlist</span>
+                        <span>#bdTravelCcommunity</span>
                     </a>
                 </div><!-- /.header-logo -->
 
@@ -33,27 +33,18 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                        <li>
+                            <a href="#">{{ Auth::user()->name }} <i class="fa fa-chevron-down"></i></a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('/profile') }}">
-                                        {{ __('Profile') }}
-                                    </a>
-
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                            <ul class="sub-menu">
+                                <li><a href="{{ url('/profile') }}">Profile</a></li>
+                                <li><a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                                    </a></li>
+                            </ul>
+                        </li>
                         @endguest
                     </ul>
 
@@ -61,23 +52,27 @@
 
                     <div class="header-bottom">
                         <div class="header-action">
-                            <a href="listing-submit.html" class="header-action-inner" title="Add Listing" data-toggle="tooltip" data-placement="bottom">
+                            <a href="{{ url('/status') }}" class="header-action-inner" title="Add Travel Experience" data-toggle="tooltip" data-placement="bottom">
                                 <i class="fa fa-plus"></i>
                             </a><!-- /.header-action-inner -->
                         </div><!-- /.header-action -->
 
                         <ul class="header-nav-primary nav nav-pills collapse navbar-collapse">
                         <li class="active">
-                            <a href="#">Home <i class="fa fa-chevron"></i></a>
+                            <a href="{{url('/')}}">Home <i class="fa fa-chevron"></i></a>
+                        </li>
+
+                        <li class="active">
+                            <a href="{{url('/experience')}}">Experience<i class="fa fa-chevron"></i></a>
                         </li>
 
                         <li>
                             <a href="#">Places<i class="fa fa-chevron-down"></i></a>
 
                             <ul class="sub-menu">
-                                <li><a href="listing-detail.html">Most View</a></li>
-                                <li><a href="listing-map.html">Travellers Choose</a></li>
-                                <li><a href="listing-grid.html">Tranding</a></li>
+                                <li><a href="{{url('/travel')}}">Most View</a></li>
+                                <li><a href="{{url('/travel')}}">Travellers Choose</a></li>
+                                <li><a href="{{url('/travel')}}">Tranding</a></li>
                             </ul>
                         </li>
 
@@ -122,7 +117,7 @@
 
                                 <li class="hidden-xs">
                                     <div class="special">
-                                        <a href="register.html">Sign Up Now</a>
+                                        <a href="{{ url('/register') }}">Sign Up Now</a>
                                     </div><!-- /.special-->
                                 </li>
                             </ul>
@@ -151,15 +146,6 @@
                                 <li><a href="admin-tables.html">Tables</a></li>
                                 <li><a href="admin-forms.html">Forms</a></li>
                                 <li><a href="admin-notifications.html">Notifications</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="#">Contact <i class="fa fa-chevron-down"></i></a>
-                            <ul class="sub-menu">
-                                <li><a href="contact-1.html">Contact v1</a></li>
-                                <li><a href="contact-2.html">Contact v2</a></li>
-                                <li><a href="contact-3.html">Contact v3</a></li>
                             </ul>
                         </li>
                     </ul>
