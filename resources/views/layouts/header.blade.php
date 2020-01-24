@@ -3,7 +3,7 @@
         <div class="container">
             <div class="header-inner">
                 <div class="header-logo">
-                    <a href="index.html">
+                    <a href="{{ url('/') }}">
                         <img src="{{asset('bdtravellbangladesh/assets/img/logo.png')}}" alt="Logo">
                         <span>Superlist</span>
                     </a>
@@ -39,6 +39,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('/profile') }}">
+                                        {{ __('Profile') }}
+                                    </a>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
