@@ -23,4 +23,5 @@ Route::get('/status','user\statusController@index')->name('status');
 Route::get('/travel','user\statusController@travel')->name('travel');
 Route::get('/experience','user\statusController@experience')->name('experience');
 Route::get('/experience-details','user\statusController@experienceDetails')->name('experience-details');
+Route::get('/traveller-list','user\profileController@travellerList')->name('travellerList');
 
