@@ -58,4 +58,8 @@ class profileController extends Controller
     	$travellerLists = User::orderBy('id','desc')->get();
     	return view('traveller-list',compact('travellerLists'));
     }
+
+    public function travellerList(){
+    	return view('traveller-list');
+    }
 }
