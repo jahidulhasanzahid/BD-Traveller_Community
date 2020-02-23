@@ -29,7 +29,10 @@ class CreateUsersTable extends Migration
             $table->string('twitter')->nullable();
             $table->string('instragram')->nullable();
             $table->string('linkedin')->nullable();
+<<<<<<< HEAD
             $table->integer('point')->nullable();
+=======
+>>>>>>> 3886e9c78b42a7b4906f1ff9283eaf8ba87fcf22
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
