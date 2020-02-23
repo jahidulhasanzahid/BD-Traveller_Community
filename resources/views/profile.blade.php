@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="main">
         <div class="main-inner">
             <div class="container">
@@ -24,7 +23,11 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i> 
                                         {{ __('Logout') }}
-                                    </a></li>
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                    </li>
                                 </ul>
                             </div><!-- /.widget -->
                         </div><!-- /.sidebar -->
@@ -37,38 +40,29 @@
                             <div class="background-white p20 mb30">
                                 <h3 class="page-title">
                                     Contact Information
-
-                                    <a href="#" class="btn btn-primary btn-xs pull-right">Save</a>
                                 </h3>
-
                                 <div class="row">
-                                    <div class="form-group col-sm-6">
-                                        <label>Name</label>
-                                        <input type="text" class="form-control" value="John">
+                                    <div class="form-group col-sm-12">
+                                        <label>Name: {{$userInformation->name}}</label>
                                     </div><!-- /.form-group -->
 
-                                    <div class="form-group col-sm-6">
-                                        <label>Surname</label>
-                                        <input type="text" class="form-control" value="Doe">
+                                    <div class="form-group col-sm-12">
+                                        <label>E-mail: {{ $userInformation->email }}</label>
                                     </div><!-- /.form-group -->
 
-                                    <div class="form-group col-sm-6">
-                                        <label>E-mail</label>
-                                        <input type="text" class="form-control" value="sample@example.com">
-                                    </div><!-- /.form-group -->
-
-                                    <div class="form-group col-sm-6">
-                                        <label>Phone</label>
-                                        <input type="text" class="form-control" value="123-456-789">
+                                    <div class="form-group col-sm-12">
+                                        <label>Phone: {{ $userInformation->phone }}</label>
                                     </div><!-- /.form-group -->
                                 </div><!-- /.row -->
                             </div>
 
+
                             <div class="background-white p20 mb30">
+                                <form action="{{ url('/profile-social-manage',$userInformation->id) }}" method="post">
+                                @csrf
                                 <h3 class="page-title">
                                     Social Connections
-
-                                    <a href="#" class="btn btn-primary btn-xs pull-right">Save</a>
+                                    <input type="submit" class="btn btn-primary btn-xs pull-right" name="submit" value="Save">
                                 </h3>
 
                                 <div class="form-horizontal">
@@ -76,87 +70,89 @@
                                         <label class="col-sm-2 control-label">Facebook</label>
 
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" value="http://facebook.com/">
+                                            <input type="text" class="form-control" name="facebook" value="@if($userInformation->facebook=='')@else {{ $userInformation->facebook }} @endif">
                                         </div><!-- /.col-* -->
+
                                     </div><!-- /.form-group -->
 
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">Twitter</label>
 
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" value="http://twitter.com/">
+                                            <input type="text" class="form-control" name="twitter" value="@if($userInformation->twitter=='')@else {{ $userInformation->twitter }} @endif">
                                         </div><!-- /.col-* -->
+
                                     </div><!-- /.form-group -->
 
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">Linkedin</label>
 
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" value="http://linkedin.com/">
+                                            <input type="text" class="form-control" name="linkedin" value="@if($userInformation->linkedin=='')@else {{ $userInformation->linkedin }} @endif">
                                         </div><!-- /.col-* -->
                                     </div><!-- /.form-group -->
 
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Dribbble</label>
-
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" value="http://dribbble.com/">
-                                        </div><!-- /.col-* -->
-                                    </div><!-- /.form-group -->
 
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">Instagram</label>
 
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" value="http://instagram.com/">
+                                            <input type="text" class="form-control" name="instragram" value="@if($userInformation->instragram=='')@else {{ $userInformation->instragram }} @endif">
                                         </div><!-- /.col-* -->
                                     </div><!-- /.form-group -->
                                 </div><!-- /.form-inline -->
+                                </form>
                             </div><!-- /.background-white -->
 
                             <div class="background-white p20 mb30">
+                                <form action="{{ url('/profile-address-manage',$userInformation->id) }}" method="post">
+                                @csrf
                                 <h3 class="page-title">
                                     Address
 
-                                    <a href="#" class="btn btn-primary btn-xs pull-right">Save</a>
+                                    <input type="submit" class="btn btn-primary btn-xs pull-right" value="Save">
                                 </h3>
 
                                 <div class="row">
                                     <div class="form-group col-sm-6">
                                         <label>State</label>
-                                        <input type="text" class="form-control" value="New York">
+                                        <input type="text" class="form-control" name="state" value="@if($userInformation->state=='')@else {{ $userInformation->state }} @endif">
                                     </div><!-- /.form-group -->
 
                                     <div class="form-group col-sm-6">
                                         <label>City</label>
-                                        <input type="text" class="form-control" value="New York City">
+                                        <input type="text" class="form-control" name="city" value="@if($userInformation->city=='')@else {{ $userInformation->city }} @endif">
                                     </div><!-- /.form-group -->
 
                                     <div class="form-group col-sm-6">
                                         <label>Street</label>
-                                        <input type="text" class="form-control" value="Everton Eve">
+                                        <input type="text" class="form-control" name="street" value="@if($userInformation->street=='')@else {{ $userInformation->street }} @endif">
                                     </div><!-- /.form-group -->
 
                                     <div class="form-group col-sm-3">
                                         <label>House Number</label>
-                                        <input type="text" class="form-control" value="123">
+                                        <input type="text" class="form-control" name="house" value="@if($userInformation->house=='')@else {{ $userInformation->house }} @endif">
                                     </div><!-- /.form-group -->
 
                                     <div class="form-group col-sm-3">
                                         <label>ZIP</label>
-                                        <input type="text" class="form-control" value="12345">
+                                        <input type="text" class="form-control" name="zip" value="@if($userInformation->zip=='')@else {{ $userInformation->zip }} @endif">
                                     </div><!-- /.form-group -->
                                 </div><!-- /.row -->
+                                </form>
                             </div>
 
                             <div class="background-white p20 mb30">
+                            <form action="{{ url('/profile-bio-manage',$userInformation->id) }}" method="post">
+                                @csrf
                                 <h3 class="page-title">
                                     Biography
 
-                                    <a href="#" class="btn btn-primary btn-xs pull-right">Save</a>
+                                    <input type="submit" class="btn btn-primary btn-xs pull-right" name="submit" value="Save">
                                 </h3>
 
-                                <textarea class="form-control" rows="7"></textarea>
+                                <textarea class="form-control" rows="7" name="bio">@if($userInformation->bio=='')@else {{ $userInformation->bio }} @endif</textarea>
+                            </form>
                             </div>
 
                         </div><!-- /.content -->
