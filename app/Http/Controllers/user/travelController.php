@@ -33,7 +33,9 @@ class travelController extends Controller
         $singleStatus = DB::table('statuses')
             ->where('statuses.title',$title)
             ->leftJoin('users', 'statuses.user_id', '=', 'users.id')
-            ->paginate(30);
+            ->first();
+        // dd($singleStatus);
+
     	return view('experience-details',compact('singleStatus'));
     }
 
