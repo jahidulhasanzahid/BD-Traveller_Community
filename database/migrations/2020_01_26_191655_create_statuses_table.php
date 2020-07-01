@@ -19,7 +19,7 @@ class CreateStatusesTable extends Migration
             $table->string('title');
             $table->string('location');
             $table->text('description');
-            $table->string('image')->nullable();
+            $table->string('status_image')->nullable();
             $table->timestamps();
         });
     }

@@ -13,7 +13,7 @@
                     </div><!-- /.page-title -->
                         <div class="posts post-detail">
                             <div class="post-content">
-                            <img class='post-content-image pull-right' src="{{asset('images/status/'.$singleStatus->image)}}">
+                            <img class='post-content-image pull-right' src="{{asset('images/status/'.$singleStatus->status_image)}}">
                             <h3>{{$singleStatus->title}}</h3>
                             <p>{{$singleStatus->description}}
                             </p>

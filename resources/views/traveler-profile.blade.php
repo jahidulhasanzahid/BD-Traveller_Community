@@ -27,7 +27,7 @@
                         @foreach($statusShows as $singleStatusShow)
                         <div class="card-row">
                             <div class="card-row-inner">
-                                <div class="card-row-image" data-background-image="{{asset('bdtravellbangladesh/assets/img/tmp/product-1.jpg')}}">
+                                <div class="card-row-image" data-background-image="{{asset('images/status/'.$singleStatusShow->status_image)}}">
                                 </div><!-- /.card-row-image -->
 
                                 <div class="card-row-body">

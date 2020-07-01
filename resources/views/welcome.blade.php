@@ -18,7 +18,7 @@
                                     @foreach($statusShow as $singlePostShow)
                                    
                                     <div class="col-sm-4">
-                                        <div class="card" data-background-image="{{asset('images/status/'.$singlePostShow->image)}}">
+                                        <div class="card" data-background-image="{{asset('images/status/'.$singlePostShow->status_image)}}">
                                             <div class="card-label">
                                                 <a href="">{{ $singlePostShow->name }}</a>
                                             </div><!-- /.card-label -->
@@ -57,7 +57,7 @@
 
                         <div class="card-row">
                             <div class="card-row-inner">
-                                <div class="card-row-image" data-background-image="{{asset('images/status/'.$singleStatusShow->image)}}">
+                                <div class="card-row-image" data-background-image="{{asset('images/status/'.$singleStatusShow->status_image)}}">
                                     
                                     <div class="card-row-label"><a href="">{{ $singleStatusShow->name }}</a></div><!-- /.card-row-label -->
                                 </div><!-- /.card-row-image -->
