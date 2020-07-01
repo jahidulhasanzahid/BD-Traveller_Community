@@ -38,9 +38,12 @@
                                 @else
                                 <li>
                                     <a href="#">{{ Auth::user()->name }} <i class="fa fa-chevron-down"></i></a>
-
+                                    
                                     <ul class="sub-menu">
                                         <li><a href="{{ url('/profile') }}">Profile</a></li>
+                                        @if(Auth::user()->id == 1)
+                                        <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
+                                        @endif
                                         <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                                 {{ __('Logout') }}

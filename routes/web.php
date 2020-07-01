@@ -43,3 +43,7 @@ Route::post('/status-update/{id}','user\statusController@statusUpdate')->name('s
 
 //search
 Route::get('/search', 'user\searchController@search')->name('search');
+
+
+//user delete
+Route::post('/user-delete/{id}','Admin\AdminController@userDelete')->name('user-delete');
