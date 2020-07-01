@@ -14,8 +14,9 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="row">
-
+                                    @php $i = 0; @endphp
                                     @foreach($statusShow as $singlePostShow)
+                                   
                                     <div class="col-sm-4">
                                         <div class="card" data-background-image="{{asset('bdtravellbangladesh/assets/img/tmp/product-4.jpg')}}">
                                             <div class="card-label">
@@ -35,6 +36,10 @@
                                             </div><!-- /.card-content -->
                                         </div><!-- /.card -->
                                     </div>
+                                    @php $i++; @endphp
+                                    @if($i  == 3)
+                                        @php break; @endphp
+                                    @endif
                                     @endforeach
                                     
                                 </div><!-- /.row -->
@@ -71,6 +76,7 @@
                             </div><!-- /.card-row-inner -->
                         </div><!-- /.card-row -->
                         @endforeach
+                        {{$statusShow->links()}}
                     </div><!-- /.cards-row -->
                 </div>
             </div><!-- /.container -->

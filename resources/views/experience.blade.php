@@ -32,7 +32,6 @@
                                     <div class="post-meta-author">By <a href="">{{ $showInfo->name }}</a></div><!-- /.post-meta-author -->
                                     <div class="post-meta-date">{{ $showInfo->created_at }}</div><!-- /.post-meta-date -->
                                     <div class="post-meta-categories"><i class="fa fa-tags"></i> <a href="blog-detail.html">{{ $showInfo->location }}</a></div><!-- /.post-meta-categories -->
-                                    <div class="post-meta-comments"><i class="fa fa-comments"></i> <a href="blog-detail.html">3 comments</a></div><!-- /.post-meta-comments -->
                                     <div class="post-meta-more"><a href="{{ url('/experience-details',$showInfo->title) }}">Read More <i class="fa fa-chevron-right"></i></a></div><!-- /.post-meta-more -->
                                 </div><!-- /.post-meta -->
                             </div><!-- /.post -->
