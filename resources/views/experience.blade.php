@@ -16,9 +16,18 @@
                         <div class="posts">
 
                             @foreach($experienceShow as $showInfo)
+                            
                             <div class="post">
                                 <div class="post-image">
-                                    <img src="{{asset('bdtravellbangladesh/assets/img/tmp/product-2.jpg')}}" alt="Where No Fan Has Gone Before">
+
+                                    <img src="{{asset('images/status/'.$showInfo->image)}}" alt="Where No Fan Has Gone Before">
+
+
+
+
+
+
+
                                     <a class="read-more" href="{{ url('/experience-details',$showInfo->title) }}">View</a>
                                 </div><!-- /.post-image -->
                             

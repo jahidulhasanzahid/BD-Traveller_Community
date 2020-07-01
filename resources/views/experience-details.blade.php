@@ -9,10 +9,11 @@
                 <div class="content">
                     <div class="page-title">
                         <h1>{{$singleStatus->title}} Details</h1>
+                       
                     </div><!-- /.page-title -->
                         <div class="posts post-detail">
                             <div class="post-content">
-                            <img class='post-content-image pull-right' src='{{asset('bdtravellbangladesh/assets/img/tmp/product-9.jpg')}}' alt'...'>
+                            <img class='post-content-image pull-right' src="{{asset('images/status/'.$singleStatus->image)}}">
                             <h3>{{$singleStatus->title}}</h3>
                             <p>{{$singleStatus->description}}
                             </p>
