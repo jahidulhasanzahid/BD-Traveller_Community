@@ -10,9 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/dashboard',function(){
-    dd('Rashed');
-})->name('dashboard');
+Route::get('/dashboard','Admin\AdminController@index')->name('dashboard');
 Route::get('/','user\travelController@welcome')->name('');
 
 Auth::routes();
