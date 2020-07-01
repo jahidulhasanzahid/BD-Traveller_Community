@@ -20,12 +20,7 @@
                             <div class="post">
                                 <div class="post-image">
 
-                                    <img src="{{asset('images/status/'.$showInfo->image)}}" alt="Where No Fan Has Gone Before">
-
-
-
-
-
+                                    <img src="{{asset('images/status/'.$showInfo->image)}}" alt="Travel Bangladesh">
 
 
                                     <a class="read-more" href="{{ url('/experience-details',$showInfo->title) }}">View</a>

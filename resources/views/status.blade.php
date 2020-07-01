@@ -45,7 +45,7 @@
                         <div class="posts">
                             <div class="post">
                                 <div class="post-image">
-                                    <img src="{{asset('bdtravellbangladesh/assets/img/tmp/product-11.jpg')}}" alt="A Clockwork Origin">
+                                    <img src="{{asset('images/status/'.$status->status_image)}}" alt="TravelBangladesh">
                                     <a class="read-more" href="{{ url('/experience-details',$status->title) }}">View</a>
                                 </div><!-- /.post-image -->
                                 <div class="post-content">
