@@ -11,10 +11,36 @@
                                 <div class="user-photo">
                                     <a href="#">
                                         <img src="{{asset('bdtravellbangladesh/assets/img/tmp/agent-2.jpg')}}" alt="User Photo">
-                                        <span class="user-photo-action">Click here to reupload</span>
+                                        <span class="user-photo-action" id="myBtn">Click here to reupload</span>
                                     </a>
                                 </div><!-- /.user-photo -->
                             </div><!-- /.widget -->
+
+                            <!-- Trigger/Open The Modal -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="background-white p20 mb30">
+    <form action="" method="post">
+        @csrf
+        <h3 class="page-title">
+            Uploda Your Profile Photo
+        </h3>
+
+        <input type="file" class="form-control" name="image">
+        <br>
+        <input type="submit" class="btn btn-primary btn-xs pull-right" name="submit" value="Upload">
+    </form>
+    </div>
+  </div>
+
+</div>
+
+
                             <div class="widget">
                                 <ul class="menu-advanced">
                                     <li><a href="{{ url('/status') }}"><i class="fa fa-pencil"></i>Travel Status</a></li>

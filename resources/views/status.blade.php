@@ -44,10 +44,10 @@
                             <div class="post">
                                 <div class="post-image">
                                     <img src="{{asset('bdtravellbangladesh/assets/img/tmp/product-11.jpg')}}" alt="A Clockwork Origin">
-                                    <a class="read-more" href="blog-detail-right-sidebar.html">View</a>
+                                    <a class="read-more" href="{{ url('/experience-details',$status->title) }}">View</a>
                                 </div><!-- /.post-image -->
                                 <div class="post-content">
-                                    <h2><a href="{{ url('/experience-details') }}">{{ $status->title }}<a></h2>
+                                    <h2><a href="{{ url('/experience-details',$status->title) }}">{{ $status->title }}<a></h2>
                                     <p style="text-align: justify;">{{ $status->description }}</p>
                                 </div><!-- /.post-content -->
                                 <div class="post-meta clearfix">
@@ -65,7 +65,7 @@
                                     </form>
                                     
                                     </div><!-- /.post-meta-comments -->
-                                    <div class="post-meta-more"><a href="{{ url('/experience-details') }}">Read More <i class="fa fa-chevron-right"></i></a></div><!-- /.post-meta-more -->
+                                    <div class="post-meta-more"><a href="{{ url('/experience-details',$status->title) }}">Read More <i class="fa fa-chevron-right"></i></a></div><!-- /.post-meta-more -->
                                 </div><!-- /.post-meta -->
                             </div><!-- /.post -->
                             </div><!-- /.posts -->

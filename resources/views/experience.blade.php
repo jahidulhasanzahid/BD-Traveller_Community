@@ -19,13 +19,13 @@
                             <div class="post">
                                 <div class="post-image">
                                     <img src="{{asset('bdtravellbangladesh/assets/img/tmp/product-2.jpg')}}" alt="Where No Fan Has Gone Before">
-                                    <a class="read-more" href="blog-detail-right-sidebar.html">View</a>
+                                    <a class="read-more" href="{{ url('/experience-details',$showInfo->title) }}">View</a>
                                 </div><!-- /.post-image -->
-
+                            
                                 <div class="post-content">
-                                    <h2><a href="blog-detail.html">{{ $showInfo->title }}<a></h2>
+                                    <h2><a href="{{ url('/experience-details',$showInfo->title) }}">{{ $showInfo->title }}<a></h2>
                                     <p>
-                                        <p class='drop-cap'>J{{ $showInfo->description }}</p>
+                                        <p class='drop-cap'>{{ $showInfo->description }}</p>
                                 </div><!-- /.post-content -->
 
                                 <div class="post-meta clearfix">
