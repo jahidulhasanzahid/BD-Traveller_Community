@@ -27,10 +27,6 @@
                             <div class="form-group">
                                 <textarea class="form-control" placeholder="Travel Description" rows="8" name="description">{{ $statusUpdate->description }}</textarea>
                             </div><!-- /.form-group --> 
-                            <div class="form-group">    
-                                <img src="{{asset('images/status/'.$statusUpdate->status_image)}}" alt="" style="witdh:120px;">   
-                                <input type="file" name="image">
-                            </div>
                             <div class="left">
                                 <input type="submit" name="submit" class="btn btn-primary btn-xl" value="Update">
                             </div><!-- /.center -->

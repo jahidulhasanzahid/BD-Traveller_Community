@@ -33,7 +33,7 @@
     <form action="{{ route('profile.photo') }}" method="post" enctype="multipart/form-data">
         @csrf
         <h3 class="page-title">
-            Uploda Your Profile Photo
+            Upload Your Profile Photo
         </h3>
 
         <input type="file" class="form-control" name="image">

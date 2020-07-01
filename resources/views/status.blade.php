@@ -20,9 +20,14 @@
                             <div class="form-group">
                                 <select class="form-control" title="Select Location" name="location">
                                     <option value="Bangladesh">Bangladesh</option>
-                                    <option value="Dhaka">Dhaka</option>
-                                    <option value="Chittagong">Chittagong</option>
-                                    <option value="Khulna">Khulna</option>
+                                    <option value="Dhaka">Turkey </option>
+                                    <option value="Chittagong">Italy </option>
+                                    <option value="Khulna">China </option>
+                                    <option value="Khulna">United States</option>
+                                    <option value="Khulna">Spain </option>
+                                    <option value="Khulna">France </option>
+                                    <option value="Khulna">Netherlands  </option>
+
                                 </select>
                             </div><!-- /.form-group -->
                             <div class="form-group">
