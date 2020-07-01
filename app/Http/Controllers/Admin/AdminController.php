@@ -15,14 +15,4 @@ class AdminController extends Controller
         $status = status::leftjoin('users','users.id','statuses.user_id')->select('users.name as name','statuses.*')->get();
         return view('admin.dashboard',compact('users','status'));
     }
-    public function userDelete($id){
-        $userDelete = User::find($id);
-        if (!is_null($userDelete)) {
-          $userDelete->delete();
-        }else {
-          return back();
-        }
-        session()->flash('success', 'User has deleted !!');
-        return back();
-    }
 }

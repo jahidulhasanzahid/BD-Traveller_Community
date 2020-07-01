@@ -20,15 +20,7 @@
                         <th scope="row">{{$key++}}</th>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
-                        <td><a href="{{url('/user-delete',$user->id)}}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('delete-form').submit();">
-                                        {{ __('Delete') }}
-                                    </a>
-                        <form id="delete-form" action="{{url('/user-delete',$user->id)}}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                        </td>
+                        <td><a href="">Delete</a></td>
                     </tr>
                     @endforeach
                 </tbody>
