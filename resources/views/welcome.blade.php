@@ -54,9 +54,10 @@
                     </div><!-- /.page-header -->
                     <div class="cards-row">
                         @foreach($statusShow as $singleStatusShow)
+
                         <div class="card-row">
                             <div class="card-row-inner">
-                                <div class="card-row-image" data-background-image="{{asset('bdtravellbangladesh/assets/img/tmp/product-1.jpg')}}">
+                                <div class="card-row-image" data-background-image="{{asset('images/status'.$singleStatusShow->image)}}">
                                     <div class="card-row-label"><a href="">{{ $singleStatusShow->name }}</a></div><!-- /.card-row-label -->
                                 </div><!-- /.card-row-image -->
 

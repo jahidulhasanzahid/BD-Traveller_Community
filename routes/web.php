@@ -24,6 +24,8 @@ Route::get('/experience-details/{title}','user\travelController@experienceDetail
 Route::get('/traveller-list','user\travelController@travellerList')->name('travellerList');
 Route::get('/traveler/{id}', 'user\travelController@travelerProfile')->name('traveler.profile');
 
+//profile photo
+Route::post('/profile-photo-upload','user\profileController@profilePhoto')->name('profile.photo');
 //update
 Route::post('/profile-social-manage/{id}', 'user\profileController@profileSocialManage')->name('profile.social.manage');
 Route::post('/profile-address-manage/{id}', 'user\profileController@profileAddressManage')->name('profile.address.manage');

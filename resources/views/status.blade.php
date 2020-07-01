@@ -11,7 +11,7 @@
                         <h2>Share Travell Experience.</h2>
                         </div>
                         <div class="background-white p30 mb30">
-                        <form action="{{ url('/status-post') }}" method="post">
+                        <form action="{{ url('/status-post') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <h3 class="page-title">Description</h3>
                             <div class="form-group">
@@ -21,13 +21,15 @@
                                 <select class="form-control" title="Select Location" name="location">
                                     <option value="Bangladesh">Bangladesh</option>
                                     <option value="Dhaka">Dhaka</option>
+                                    <option value="Chittagong">Chittagong</option>
+                                    <option value="Khulna">Khulna</option>
                                 </select>
                             </div><!-- /.form-group -->
                             <div class="form-group">
                                 <textarea class="form-control" placeholder="Travel Description" rows="8" name="description"></textarea>
                             </div><!-- /.form-group --> 
                             <div class="form-group">       
-                                <input type="file" id="input-file" name="image" multiple="">
+                                <input type="file" class="form-control" name="image" require>
                             </div>
                             <div class="left">
                                 <input type="submit" name="submit" class="btn btn-primary btn-xl" value="Post">

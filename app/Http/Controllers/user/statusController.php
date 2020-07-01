@@ -27,6 +27,9 @@ class statusController extends Controller
         $statusPost->title = $request->title;
         $statusPost->location = $request->location;
         $statusPost->description = $request->description;
+        $imageName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('images/status'),$imageName);
+        $statusPost->image = $imageName;
         $statusPost->save();
       
         $point = user::find(Auth::user()->id);

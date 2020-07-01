@@ -57,5 +57,15 @@ class profileController extends Controller
 		    return back();
     }
 
+	public function profilePhoto(Request $request){
+		$uploadProfilePhoto = User::find(Auth::user()->id);
+		$imageName = time().'.'.$request->image->extension();
+		$request->image->move(public_path('images/'),$imageName);
+		$uploadProfilePhoto->image = $imageName;
+		$uploadProfilePhoto->save();
+
+		return back();
+	}
+
 
 }

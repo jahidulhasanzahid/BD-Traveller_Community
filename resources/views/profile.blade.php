@@ -10,7 +10,12 @@
                             <div class="widget">
                                 <div class="user-photo">
                                     <a href="#">
-                                        <img src="{{asset('bdtravellbangladesh/assets/img/tmp/agent-2.jpg')}}" alt="User Photo">
+                                        @if($userInformation->image != null)
+                                            @php $image= $userInformation->image; @endphp
+                                        @else
+                                        @php $image= 'default.jpg'; @endphp
+                                        @endif
+                                        <img src="{{asset('images/'.$image)}}" alt="User Photo">
                                         <span class="user-photo-action" id="myBtn">Click here to reupload</span>
                                     </a>
                                 </div><!-- /.user-photo -->
@@ -25,7 +30,7 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <div class="background-white p20 mb30">
-    <form action="" method="post">
+    <form action="{{ route('profile.photo') }}" method="post" enctype="multipart/form-data">
         @csrf
         <h3 class="page-title">
             Uploda Your Profile Photo
