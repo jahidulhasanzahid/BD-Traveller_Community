@@ -5,7 +5,7 @@
                     <div class="header-logo">
                         <a href="{{ url('/') }}">
                             <img src="{{asset('bdtravellbangladesh/assets/img/logo.png')}}" alt="Logo">
-                            <span>#bdTravelCommunity</span>
+                            <span>#TravelBangladesh</span>
                         </a>
                     </div><!-- /.header-logo -->
 
