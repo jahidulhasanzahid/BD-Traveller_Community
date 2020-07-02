@@ -28,7 +28,6 @@
                                 </div><!-- /.post-content -->
 
                                 <div class="post-meta clearfix">
-                                    <div class="post-meta-author">By <a href="{{ url('/experience-details',$showInfo->title) }}">Fiona Wilson</a></div><!-- /.post-meta-author -->
                                     <div class="post-meta-date">{{ $showInfo->created_at }}</div><!-- /.post-meta-date -->
                                     <div class="post-meta-categories"><i class="fa fa-tags"></i> <a href="">{{ $showInfo->location }}</a></div><!-- /.post-meta-categories -->
                                     <div class="post-meta-more"><a href="{{ url('/experience-details') }}">Read More <i class="fa fa-chevron-right"></i></a></div><!-- /.post-meta-more -->

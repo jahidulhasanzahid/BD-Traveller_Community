@@ -49,7 +49,6 @@
                             <div class="widget">
                                 <ul class="menu-advanced">
                                     <li><a href="{{ url('/status') }}"><i class="fa fa-pencil"></i>Travel Status</a></li>
-                                    <li><a href="#"><i class="fa fa-key"></i> Password</a></li>
                                     <li><a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i> 

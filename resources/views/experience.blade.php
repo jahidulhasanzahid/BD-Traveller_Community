@@ -20,7 +20,7 @@
                             <div class="post">
                                 <div class="post-image">
 
-                                    <img src="{{asset('images/status/'.$showInfo->image)}}" alt="Travel Bangladesh">
+                                    <img src="{{asset('images/status/'.$showInfo->status_image)}}" alt="Travel Bangladesh">
 
 
                                     <a class="read-more" href="{{ url('/experience-details',$showInfo->title) }}">View</a>
@@ -35,7 +35,7 @@
                                 <div class="post-meta clearfix">
                                     <div class="post-meta-author">By <a href="">{{ $showInfo->name }}</a></div><!-- /.post-meta-author -->
                                     <div class="post-meta-date">{{ $showInfo->created_at }}</div><!-- /.post-meta-date -->
-                                    <div class="post-meta-categories"><i class="fa fa-tags"></i> <a href="blog-detail.html">{{ $showInfo->location }}</a></div><!-- /.post-meta-categories -->
+                                    <div class="post-meta-categories"><i class="fa fa-tags"></i> <a href="">{{ $showInfo->location }}</a></div><!-- /.post-meta-categories -->
                                     <div class="post-meta-more"><a href="{{ url('/experience-details',$showInfo->title) }}">Read More <i class="fa fa-chevron-right"></i></a></div><!-- /.post-meta-more -->
                                 </div><!-- /.post-meta -->
                             </div><!-- /.post -->

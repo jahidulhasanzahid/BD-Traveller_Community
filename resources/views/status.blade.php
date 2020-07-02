@@ -20,13 +20,13 @@
                             <div class="form-group">
                                 <select class="form-control" title="Select Location" name="location">
                                     <option value="Bangladesh">Bangladesh</option>
-                                    <option value="Dhaka">Turkey </option>
-                                    <option value="Chittagong">Italy </option>
-                                    <option value="Khulna">China </option>
-                                    <option value="Khulna">United States</option>
-                                    <option value="Khulna">Spain </option>
-                                    <option value="Khulna">France </option>
-                                    <option value="Khulna">Netherlands  </option>
+                                    <option value="Turkey">Turkey </option>
+                                    <option value="Italy">Italy </option>
+                                    <option value="China">China </option>
+                                    <option value="United States">United States</option>
+                                    <option value="Spain">Spain </option>
+                                    <option value="France">France </option>
+                                    <option value="Netherlands">Netherlands  </option>
 
                                 </select>
                             </div><!-- /.form-group -->
@@ -57,8 +57,9 @@
                                     <h2><a href="{{ url('/experience-details',$status->title) }}">{{ $status->title }}<a></h2>
                                     <p style="text-align: justify;">{{ $status->description }}</p>
                                 </div><!-- /.post-content -->
+                                
                                 <div class="post-meta clearfix">
-                                    <div class="post-meta-author">By <a href="blog-detail.html">Eric Yorick</a></div><!-- /.post-meta-author -->
+                                <div class="post-meta-categories">By {{$status->name}}</div><!-- /.post-meta-categories -->
                                     <div class="post-meta-date">{{ $status->created_at }}</div><!-- /.post-meta-date -->
                                     <div class="post-meta-categories"><i class="fa fa-tags"></i> <a href="">{{ $status->location }}</a></div><!-- /.post-meta-categories -->
                                     <div class="post-meta-comments"><i class="fa fa-pen"></i> <a href="{{ url('/status-edit',$status->id) }}">Edit</a> <span>//</span>

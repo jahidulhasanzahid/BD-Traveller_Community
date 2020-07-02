@@ -11,7 +11,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Action</th>
+                        <!-- <th scope="col">Action</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -20,7 +20,7 @@
                         <th scope="row">{{$key++}}</th>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
-                        <td><a href="">Delete</a></td>
+                        <!-- <td><a href="">Delete</a></td> -->
                     </tr>
                     @endforeach
                 </tbody>

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Auth;
 use App\User;
 use App\status;
+use DB;
 
 class statusController extends Controller
 { 
@@ -16,7 +17,11 @@ class statusController extends Controller
     }
     
     public function index(){
-      $statusShow = status::where('user_id',Auth::user()->id)->orderBy('id','desc')->paginate(10);
+      // $statusShow = status::where('user_id',Auth::user()->id)->orderBy('id','desc')->paginate(10);
+      $statusShow = DB::table('statuses')
+            ->leftJoin('users', 'statuses.user_id', '=', 'users.id')
+            ->where('user_id',Auth::user()->id)
+            ->paginate(20);
     	return view('status',compact('statusShow'));
     }
 
